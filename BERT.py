@@ -56,13 +56,19 @@ def extract_embeddings(tweets, batch_size=16):
 # Process training data
 pos_tweets = read_tweets("twitter-datasets/train_pos.txt")
 neg_tweets = read_tweets("twitter-datasets/train_neg.txt")
+pos_tweets_full = read_tweets("twitter-datasets/train_pos_full.txt")
+neg_tweets_full = read_tweets("twitter-datasets/train_neg_full.txt")
 train_tweets = pos_tweets + neg_tweets
+train_tweets_full = pos_tweets_full + neg_tweets_full
 print(f"Total training tweets to process: {len(train_tweets)}")
-train_embeddings = extract_embeddings(train_tweets)
+train_embeddings_full = extract_embeddings(train_tweets_full)
+print(f"Total training tweets (full) to process: {len(train_tweets_full)}")
 
 # Save training embeddings
 np.save("bert_train_embeddings.npy", train_embeddings)
 print("Training embeddings saved as 'bert_train_embeddings.npy'.")
+np.save("bert_train_embeddings_full.npy", train_embeddings_full)
+print("Training embeddings saved as 'bert_train_embeddings_full.npy'.")
 
 # Process test data
 test_tweets = read_tweets("twitter-datasets/test_data.txt")
