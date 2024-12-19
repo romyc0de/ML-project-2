@@ -103,7 +103,7 @@ class SentimentClassifier(nn.Module):
 
 # Define model
 input_dim = cls_embeddings_np.shape[1]
-layer_sizes = [512, 265, 128]
+layer_sizes = [512, 256, 128]
 dropout_rates = [0.3, 0.3, 0.3]
 
 model = SentimentClassifier(
