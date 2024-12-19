@@ -102,7 +102,7 @@ To ensure smooth execution and reproducibility of your BERT-based project, insta
 1. **Run `BERT.py`**
    - This script prepares or initializes the base BERT model for training or fine-tuning.
 
-2. **Execute `Pipeline-BERT.py` or `Pipeline-BERT-nn.py`**
+2. **Execute `Pipeline-BERT-logistic.py` or `Pipeline-BERT-nn.py`**
    - Choose one of these scripts to run your pipeline with the pre-trained BERT model for the specific task.
 
 ### Option 2 (Best Results)
